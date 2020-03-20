@@ -1,14 +1,14 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app" class="container">
     <router-view/>
   </div>
 </template>
 
 <style>
+body, html, #app {
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,3 +30,10 @@
   color: #42b983;
 }
 </style>
+<script>
+import 'bulma/css/bulma.css';
+
+export default {
+
+};
+</script>

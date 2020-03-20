@@ -132,7 +132,7 @@ export default {
         this.onPlayerLeave(conn);
       });
     });
-    this.peer.on('error', console.error);
+    this.peer.on('error', console.error); // eslint-disable-line
   },
   components: {
     Action,

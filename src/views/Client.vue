@@ -109,7 +109,7 @@ export default {
         this.serverConnection.on('data', this.onMessageReceived);
       });
     });
-    this.peer.on('error', console.error);
+    this.peer.on('error', console.error); // eslint-disable-line
   },
   components: {
     Action,

@@ -40,7 +40,9 @@ export default {
   },
   computed: {
     active() {
-      return window.localStorage.getItem('name') === this.currentPlayer;
+      return window.localStorage.getItem('name') === this.currentPlayer
+        && this.outcome.length !== 2
+        && !this.rolling;
     },
   },
   methods: {

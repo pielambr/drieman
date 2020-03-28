@@ -33,6 +33,9 @@
     <div v-else-if="sum(11)">
       Pint uit tegen volgende beurt
     </div>
+    <div v-if="includes(3)">
+      Drieman drinkt
+    </div>
   </div>
 </template>
 <script>
@@ -48,6 +51,9 @@ export default {
     },
     sum(number) {
       return this.outcome[0] + this.outcome[1] === number;
+    },
+    includes(number) {
+      return this.outcome.indexOf(number) >= 0;
     },
     previousPlayer() {
       const idx = this.players.indexOf(this.currentPlayer);
